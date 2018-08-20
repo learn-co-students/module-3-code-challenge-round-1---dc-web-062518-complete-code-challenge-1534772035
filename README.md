@@ -33,7 +33,7 @@ For this challenge it is important to work iteratively, one feature at a time, b
 
 We have provided what we believe to be a good breakdown of how to approach the this problem.
 
-## Step 1 - Get the Image Data
+<!-- ## Step 1 - Get the Image Data
 
 When the page loads you will need to make a request to the API to get the data about your picture. The API follows RESTful conventions.
 
@@ -69,9 +69,9 @@ Use the data from the API response to append the information to the DOM. You wil
 
 Use the example html to guide you as to where this data should go.
 
-(If you cannot get your fetch request to work correctly you can always use the example response above to append content to the DOM and work with for the subsequent steps)
+(If you cannot get your fetch request to work correctly you can always use the example response above to append content to the DOM and work with for the subsequent steps) -->
 
-## Step 2 - Like Feature (Frontend)
+<!-- ## Step 2 - Like Feature (Frontend)
 
 The next feature to approach is the functionality to add likes to a picture. First get this working in the browser only without worrying about persistence.
 
@@ -79,9 +79,9 @@ Clicking the 'Like' button should increase the number of likes by one.
 
 A user can like the same picture multiple times.
 
-## Step 3 - Like Feature (Backend)
-
-This app will use what is called *optimistic rendering*. This means the DOM will be updated before the changes are added to the database.  When a user clicks the 'Like' button we will immediately update the DOM.  Next your job is to make a POST request to persist the new Like in the backend database.
+<!-- ## Step 3 - Like Feature (Backend)
+ -->
+<!-- This app will use what is called *optimistic rendering*. This means the DOM will be updated before the changes are added to the database.  When a user clicks the 'Like' button we will immediately update the DOM.  Next your job is to make a POST request to persist the new Like in the backend database.
 
 #### API Docs
 #### Endpoint to create a Like
@@ -96,7 +96,7 @@ Required keys in the body of the request:
 Required Headers
 {
   'Accept': 'application/json',
-  'Content-Type': 'application/json'
+  'Content-Type': 'application/json'}
 }
 
 Example Response:
@@ -110,7 +110,7 @@ Example Response:
 
 Since we are using optimistic rendering, you shouldn't have to do anything with the response.
 
-To test your code you should be able to refresh the page and see the number of likes be the increased number.
+To test your code you should be able to refresh the page and see the number of likes be the increased number. --> -->
 
 ## Step 4 - Comment Feature (Frontend)
 
