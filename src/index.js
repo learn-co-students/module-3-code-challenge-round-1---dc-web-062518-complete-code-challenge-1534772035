@@ -9,7 +9,16 @@ document.addEventListener('DOMContentLoaded', function() {
   const commentsURL = `https://randopic.herokuapp.com/comments/`
 
 
+  const likeButton = document.querySelector('#like_button')
+
+  const form = document.querySelector('#comment_form')
+  const submit = form.elements.submit
+   form.addEventListener('submit', ()=>commentsHandler(event))
+  console.log(form.elements)
   getPicture(imageURL,imageId)
+   likeButton.addEventListener('click', ()=>handleLikes())
+
+
 })
 
 
@@ -37,4 +46,37 @@ function renderImage(json) {
     ul.append(li)
   })
 
+}
+
+function handleLikes() {
+  let span = document.querySelector('#likes')
+
+  let likes = parseInt(span.innerHTML)
+
+  likes ++
+  span.innerHTML = likes
+  likesPost(likes)
+}
+
+function likesPost(likes) {
+  fetch(`https://randopic.herokuapp.com/likes/`,{
+    method: 'POST',
+
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body:JSON.stringify({
+        image_id: 2
+    })
+  })
+}
+
+function commentsHandler(event) {
+  event.preventDefault()
+  let li = document.createElement('li')
+  let ul = document.querySelector('#comments')
+
+  li.innerHTML = document.querySelector('#comment_input').value
+  ul.append(li)
 }
